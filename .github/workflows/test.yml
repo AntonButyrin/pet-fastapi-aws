@@ -44,4 +44,4 @@ jobs:
           git config --global user.name "talk_booking"
           git config --global user.email "talk_booking@pytest.python"
       - name: Run tests
-        run: poetry run pytest -vv --exitfirst -n auto
+        run: poetry run python -m pytest --junitxml=report.xml --cov=./ --cov-report=xml tests/unit tests/integration
